@@ -1,0 +1,14 @@
+[Unit]
+Description=gunicorn daemon
+Requires=rocket.socket
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/rocket
+ExecStart=/root/venvs/rocket_env/bin/gunicorn \
+        --access-logfile - \
+        --workers 3 \
+        --bind unix:/run/rocket.sock \
+        rocket.wsgi:application

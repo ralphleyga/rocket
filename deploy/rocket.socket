@@ -1,0 +1,8 @@
+[Unit]
+Description=rocket socket
+
+[Socket]
+ListenStream=/run/rocket.sock
+
+[Install]
+WantedBy=multi-user.target

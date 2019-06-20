@@ -1,0 +1,18 @@
+server {
+    listen 80;
+    server_name rocket.rafufu.com;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location /static/ {
+        root /var/www/rocket/public/;
+    }
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/run/rocket.sock;
+    }
+}
+
+# sudo cp -a rocket/deploy/rocket_nginx /etc/nginx/sites-available
+# sudo ln -s /etc/nginx/sites-available/rocket_nginx /etc/nginx/sites-enabled
+# sudo nano /etc/nginx/sites-available/rocket_nginx
