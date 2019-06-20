@@ -25,7 +25,7 @@ SECRET_KEY = 'ldx=l^&$^a1$#mo3+ennofd3ug*rlev5de5-+-%&7v*@+oj*(9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*',]
 
 
 # Application definition
