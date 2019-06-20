@@ -28,5 +28,5 @@ If no errors are reported, go ahead and restart Nginx by typing:
 
 
 sudo systemctl daemon-reload
-sudo systemctl restart rocket_gunicorn
+sudo systemctl restart rocket
 sudo systemctl restart nginx

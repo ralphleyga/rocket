@@ -4,7 +4,7 @@ Requires=rocket.socket
 After=network.target
 
 [Service]
-User=www-data
+User=devvy
 Group=www-data
 WorkingDirectory=/var/www/rocket
 ExecStart=/root/venvs/rocket_env/bin/gunicorn \
