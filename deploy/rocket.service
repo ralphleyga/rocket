@@ -4,10 +4,10 @@ Requires=rocket.socket
 After=network.target
 
 [Service]
-User=devvy
-Group=www-data
+User=root
+Group=root
 WorkingDirectory=/var/www/rocket
-ExecStart=/root/venvs/rocket_env/bin/gunicorn \
+ExecStart=/home/ralph/venvs/rocket_env/bin/gunicorn \
         --access-logfile - \
         --workers 3 \
         --bind unix:/run/rocket.sock \

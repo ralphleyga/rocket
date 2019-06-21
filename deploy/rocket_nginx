@@ -1,10 +1,10 @@
 server {
     listen 80;
-    server_name rocket.rafufu.com;
+    server_name rocket-app.rafufu.com;
 
     location = /favicon.ico { access_log off; log_not_found off; }
     location /static/ {
-        alias /var/www/rocket/public/;
+        alias /var/www/public/rocket/;
     }
 
     location / {
@@ -13,6 +13,6 @@ server {
     }
 }
 
-# sudo cp -a rocket/deploy/rocket_nginx /etc/nginx/sites-available
+# sudo cp -a deploy/rocket_nginx /etc/nginx/sites-available
 # sudo ln -s /etc/nginx/sites-available/rocket_nginx /etc/nginx/sites-enabled
 # sudo nano /etc/nginx/sites-available/rocket_nginx
